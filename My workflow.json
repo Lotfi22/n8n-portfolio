@@ -1,0 +1,219 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "webhook-test",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -736,
+        -192
+      ],
+      "id": "85dde0f5-1ce7-49bf-b150-b448c58fa52b",
+      "name": "Webhook",
+      "webhookId": "e3210eb4-0951-4011-8c47-6d96843e8c3f"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "5d6d1b37-c918-4666-a9ca-ef26eb2c50b1",
+              "leftValue": "={{ $json.body.action }}",
+              "rightValue": "signed_up",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -544,
+        -224
+      ],
+      "id": "0f130982-0c4f-41d4-b534-97b23cc9f16e",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "6a90fe12-d176-4f5c-87e3-4fc20bc836c8",
+              "leftValue": "={{ $('Webhook').item.json.body.action }}",
+              "rightValue": "cancelled",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -352,
+        -16
+      ],
+      "id": "6c87b2bf-2e1d-4541-b739-bbb104f0bf44",
+      "name": "If1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ab1e714f-5825-46a5-9b39-46fa2b6f1171",
+              "name": "response",
+              "value": "Account Created",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -256,
+        -240
+      ],
+      "id": "530a6c32-c747-449c-a7d1-0b90f7540ef7",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ab1e714f-5825-46a5-9b39-46fa2b6f1171",
+              "name": "response",
+              "value": "Sorry to see you go",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -16,
+        -80
+      ],
+      "id": "2f052fa8-8f4e-401d-ad48-b4247f2a7345",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ab1e714f-5825-46a5-9b39-46fa2b6f1171",
+              "name": "response",
+              "value": "=Unknown action received : {{ $json.body.action }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -144,
+        112
+      ],
+      "id": "2697ec39-4ab8-4220-9503-a4991b9403e4",
+      "name": "Edit Fields2"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Edit Fields2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "c591bbf4-0680-4f90-bc89-21bdbdf283b8",
+  "meta": {
+    "instanceId": "f92a9c8db45952cc74ae996eeefb957f97c522ce85569cf715523e96693a4c06"
+  },
+  "id": "y9w96acHXsbOGHvH",
+  "tags": []
+}
