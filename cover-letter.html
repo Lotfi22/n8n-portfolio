@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cover Letter - Lotfi Ghezal - Austrian Visa Application</title>
+<style>
+  @page {
+    size: A4;
+    margin: 15mm 18mm;
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    line-height: 1.45;
+    font-size: 9.7pt;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+  }
+  .page {
+    height: 100%;
+    page-break-after: always;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .page:last-child {
+    page-break-after: avoid;
+  }
+
+  /* Header */
+  .header {
+    border-bottom: 2px solid #0f2b48;
+    padding-bottom: 12px;
+    margin-bottom: 14px;
+    display: table;
+    width: 100%;
+  }
+  .header-left {
+    display: table-cell;
+    width: 60%;
+    vertical-align: top;
+  }
+  .header-right {
+    display: table-cell;
+    width: 40%;
+    vertical-align: top;
+    text-align: right;
+  }
+  .my-name {
+    font-size: 14pt;
+    font-weight: 700;
+    color: #0f2b48;
+    margin-bottom: 2px;
+  }
+  .my-title {
+    font-size: 9.5pt;
+    font-weight: 600;
+    color: #0284c7;
+    margin-bottom: 6px;
+  }
+  .contact-details {
+    font-size: 8.8pt;
+    color: #475569;
+    line-height: 1.4;
+  }
+  .recipient-card {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-left: 3px solid #0f2b48;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-align: left;
+    display: inline-block;
+    font-size: 8.8pt;
+    color: #1e293b;
+  }
+  .date-line {
+    font-size: 9pt;
+    color: #64748b;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  /* Subject */
+  .subject {
+    background: #f1f5f9;
+    border-left: 4px solid #0284c7;
+    padding: 8px 12px;
+    font-weight: 700;
+    color: #0f2b48;
+    margin-bottom: 14px;
+    font-size: 9.8pt;
+  }
+
+  /* Typography */
+  h3 {
+    font-size: 10pt;
+    font-weight: 700;
+    color: #0f2b48;
+    margin: 12px 0 6px 0;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  p {
+    margin: 0 0 8px 0;
+    text-align: justify;
+  }
+  ul {
+    margin: 4px 0 8px 18px;
+    padding: 0;
+  }
+  li {
+    margin-bottom: 4px;
+  }
+
+  /* Two Column Cards */
+  .cards-row {
+    display: table;
+    width: 100%;
+    margin: 8px 0;
+  }
+  .card-cell {
+    display: table-cell;
+    width: 50%;
+    vertical-align: top;
+    padding-right: 6px;
+  }
+  .card-cell:last-child {
+    padding-right: 0;
+    padding-left: 6px;
+  }
+  .box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 9px 12px;
+    font-size: 8.8pt;
+  }
+  .box strong {
+    color: #0f2b48;
+  }
+  .pill {
+    background: #e0f2fe;
+    color: #0369a1;
+    font-weight: 600;
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 8.5pt;
+  }
+  .pill-green {
+    background: #ecfdf5;
+    color: #047857;
+    font-weight: 600;
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 8.5pt;
+  }
+
+  /* Table */
+  table.simple-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0;
+    font-size: 8.8pt;
+  }
+  table.simple-table th, table.simple-table td {
+    border: 1px solid #cbd5e1;
+    padding: 5px 8px;
+    text-align: left;
+  }
+  table.simple-table th {
+    background: #f1f5f9;
+    color: #0f2b48;
+    font-weight: 600;
+  }
+
+  /* Signature & Checklist */
+  .sign-area {
+    display: table;
+    width: 100%;
+    margin-top: 14px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 10px;
+  }
+  .sign-cell-left {
+    display: table-cell;
+    width: 60%;
+    vertical-align: top;
+    font-size: 8pt;
+    color: #475569;
+  }
+  .sign-cell-right {
+    display: table-cell;
+    width: 40%;
+    vertical-align: top;
+    text-align: right;
+  }
+  .sign-name {
+    font-weight: 700;
+    font-size: 10pt;
+    color: #0f2b48;
+    margin-top: 35px;
+  }
+  .footer-tag {
+    font-size: 7.5pt;
+    color: #94a3b8;
+    text-align: center;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 4px;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= PAGE 1 ================= -->
+<div class="page">
+  <div>
+    <!-- Header -->
+    <div class="header">
+      <div class="header-left">
+        <div class="my-name">Lotfi GHEZAL</div>
+        <div class="my-title">Software Engineer &bull; Founder of IntellectStim LLC</div>
+        <div class="contact-details">
+          Date of Birth: July 22, 1997 (Algiers) &bull; Nationality: Algerian<br>
+          Passport No.: <strong>307271668</strong> (Valid until Dec 08, 2031)<br>
+          Algerian Auto-Entrepreneur Card (ANAE): <strong>109707220307924920</strong><br>
+          Address: CEM Lido BT B1 Mohamadia, 16058 Algiers, Algeria<br>
+          Phone: +213 541 62 42 84 &bull; Email: ghezal.lotfi10@gmail.com
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="date-line">Algiers, November 5, 2026</div>
+        <div class="recipient-card">
+          <strong>To:</strong><br>
+          The Consular Officer<br>
+          Embassy of Austria in Algiers<br>
+          VFS Global Visa Application Centre
+        </div>
+      </div>
+    </div>
+
+    <!-- Subject -->
+    <div class="subject">
+      Subject: Application for a Schengen Business Visa &mdash; Tech Conferences in Vienna (Nov 24 to Dec 04, 2026)
+    </div>
+
+    <p>Dear Consular Officer,</p>
+    <p>
+      My name is <strong>Lotfi Ghezal</strong>. I am a 29-year-old software engineer living and working in Algiers. I am writing this letter to respectfully introduce myself, explain the purpose of my upcoming trip to Vienna from <strong>November 24 to December 04, 2026 (10 nights)</strong>, and provide clear details about my background and my commitments here in Algeria.
+    </p>
+
+    <!-- Section 1: Who I am -->
+    <h3>1. About My Work &amp; Company</h3>
+    <p>I work in software engineering through two complementary activities:</p>
+    
+    <div class="cards-row">
+      <div class="card-cell">
+        <div class="box">
+          <strong>My Work in Algeria (Auto-Entrepreneur)</strong><br>
+          I am registered as an independent software engineer with the Algerian National Agency (ANAE N° 109707220307924920).
+          <br>&bull; <strong>Declared 2025 Revenue (Tax C20):</strong> <span class="pill-green">2,000,000 DZD</span>.
+          <br>&bull; I build and maintain internal ERP software and train IT staff for local Algerian companies (such as École Al-Wissem, SARL ProBat, and SARL CITIN).
+          <br>&bull; Portfolio: <span class="pill">https://digitalx-solution.com</span>
+        </div>
+      </div>
+      <div class="card-cell">
+        <div class="box">
+          <strong>My US Tech Company (IntellectStim LLC)</strong><br>
+          I am the founder and CEO of <strong>IntellectStim LLC</strong>, a software company registered in Wyoming (Entity ID: 2024-001426093 &bull; FinCEN BOIR ID: 50000001251936).
+          <br>&bull; <strong>Company Website:</strong> <span class="pill">www.IntellectStim.com</span>
+          <br>&bull; Our main product is <strong>VelaSim</strong>, an online eSIM service designed to help international travelers get easy mobile data access worldwide.
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Why I am visiting Vienna -->
+    <h3>2. Purpose of My Trip to Vienna</h3>
+    <p>
+      I have been invited to participate in two technology events taking place in Vienna:
+    </p>
+
+    <table class="simple-table">
+      <thead>
+        <tr>
+          <th style="width: 25%;">Date &amp; Venue</th>
+          <th style="width: 35%;">Event &amp; Host</th>
+          <th style="width: 40%;">Why I Am Attending</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Nov 26 &ndash; 27, 2026</strong><br>Austria Center Vienna</td>
+          <td><strong>IT Futures 2026</strong><br>Organized by <em>72net.io eU</em><br><em>(Signed invitation letter attached)</em></td>
+          <td>To follow technical presentations on Artificial Intelligence, Cloud infrastructure, and Cybersecurity, and to meet with European tech companies to discuss telecom partnerships for our eSIM platform (VelaSim).</td>
+        </tr>
+        <tr>
+          <td><strong>Dec 02, 2026 (14h&ndash;19h)</strong><br>Startup House Vienna</td>
+          <td><strong>Open Link Day 2026</strong><br><em>Wirtschaftsagentur Wien</em><br>(Vienna Business Agency)</td>
+          <td>To attend sessions on open-source software and digital sovereignty in Europe, and to connect with members of the Vienna tech community.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="font-size: 8.8pt; color: #475569; margin-top: 4px;">
+      Between November 28 and December 1, I plan to use the time to review the technical ideas gathered from the sessions, conduct B2B follow-ups, and prepare software integrations.
+    </p>
+
+  </div>
+  <div class="footer-tag">
+    Page 1 / 2 &mdash; Lotfi GHEZAL &bull; Visa Application Cover Letter &bull; Austrian Embassy in Algiers
+  </div>
+</div>
+
+<!-- ================= PAGE 2 ================= -->
+<div class="page">
+  <div>
+    <!-- Section 3: Financial coverage -->
+    <h3>3. Travel Expenses &amp; Financial Means</h3>
+    <p>
+      I am covering all expenses for this trip (hotel, flights, food, and local transportation) <strong>completely on my own with my personal savings and business income</strong>. My financial situation is stable and transparent:
+    </p>
+
+    <div class="cards-row">
+      <div class="card-cell">
+        <div class="box">
+          <strong>Available Euro Funds (AGB Visa Card)</strong><br>
+          I maintain a foreign currency Euro account with Gulf Bank Algérie (AGB Account #<strong>4549732976</strong>):
+          <br>&bull; <strong>Current balance (Nov 03, 2026):</strong> <span class="pill-green">2,017.29 EUR</span>.
+          <br>&bull; This provides about <strong>200 EUR per day</strong> for my 10-night stay, which easily covers my private room, meals, and transit.
+          <br>&bull; As shown on the official bank statement, I actively used this same Visa card during my trip to Malaysia and Bali in August&ndash;September 2026 (spending 1,331.01 EUR).
+        </div>
+      </div>
+      <div class="card-cell">
+        <div class="box">
+          <strong>Savings &amp; Business Funds in Algeria</strong><br>
+          My ongoing work in Algeria generates steady domestic income:
+          <br>&bull; <strong>Postal Account (CCP #20816177):</strong> Certified balance of <span class="pill-green">417,217.13 DZD</span>, reflecting regular client payments over the last 4 months.
+          <br>&bull; <strong>AGB Dinar Account (#4549731208):</strong> Balance of <span class="pill-green">83,668.88 DZD</span>.
+          <br>&bull; <strong>Official Tax Return:</strong> 2,000,000 DZD revenue declared on my 2025 C20 tax certificate.
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 4: Travel History & Ties to Algeria -->
+    <h3>4. Travel History &amp; Commitments in Algeria (Reason to Return)</h3>
+    <p>
+      <strong>Travel history and full respect for visas:</strong> Over the past 4 years (2022 to 2026), I have traveled to <strong>9 countries across 10 trips</strong>: Tunisia (twice), Egypt, Turkey, Thailand, Saudi Arabia, Tanzania, Morocco, Malaysia, and Indonesia. All stamps and visas are clearly visible in my passport #307271668. On every single occasion, I followed local rules and returned home to Algiers before my permission expired.
+    </p>
+    <p>
+      <strong>Binding client contracts requiring my physical presence in Algiers:</strong> I cannot stay abroad because my local clients rely on me directly on site:
+    </p>
+    <ul>
+      <li><strong>École Al-Wissem:</strong> Ongoing contract for maintaining and upgrading their internal school ERP system.</li>
+      <li><strong>SARL ProBat:</strong> Active technical training contract requiring in-person training sessions at their offices each month.</li>
+      <li><strong>SARL CITIN:</strong> B2B enterprise contract for on-site software deployment starting in early January 2027.</li>
+    </ul>
+    <p>
+      These contracts and my day-to-day clients require my presence in Algeria immediately after this trip.
+    </p>
+
+    <!-- Section 5: Conclusion & Promise -->
+    <h3>5. My Commitment</h3>
+    <p>
+      I promise to use this visa solely for the professional conferences mentioned, to respect all Austrian and European regulations, and to <strong>leave Austria and the Schengen area on December 04, 2026</strong> as scheduled on my return flight.
+    </p>
+    <p>
+      Thank you very much for your time and for reviewing my application. I remain available if you need any additional clarification.
+    </p>
+
+    <!-- Signature and Checklist -->
+    <div class="sign-area">
+      <div class="sign-cell-left">
+        <strong style="color: #0f2b48;">Attached supporting documents:</strong><br>
+        &bull; Signed application form &amp; standard Schengen photos<br>
+        &bull; IT Futures 2026 signed invitation letter &amp; Open Link Day 2026 confirmation<br>
+        &bull; Hotel booking in Vienna (private room) &amp; Return flight reservation<br>
+        &bull; Schengen travel insurance (coverage &gt; 30,000 EUR)<br>
+        &bull; ANAE Auto-Entrepreneur Card, 2025 C20 tax certificate (2M DA), NIF, CASNOS 2026<br>
+        &bull; IntellectStim LLC corporate documents (Wyoming Certificate, Operating Agreement, BOIR)<br>
+        &bull; Official stamped bank statements (AGB EUR: 2,017.29 €, CCP: 417,217 DA, AGB DZD) + Visa card copy<br>
+        &bull; Algerian client contracts (École Al-Wissem, SARL ProBat, SARL CITIN)<br>
+        &bull; Color copies of all 10 international travel stamps in passport 307271668
+      </div>
+      <div class="sign-cell-right">
+        <div>Algiers, November 5, 2026</div>
+        <div class="sign-name">Lotfi GHEZAL</div>
+        <div style="font-size: 8pt; color: #64748b; margin-top: 2px;">Software Engineer &bull; Founder of IntellectStim LLC</div>
+        <div style="height: 40px;"></div>
+        <div style="font-size: 8pt; color: #94a3b8; font-style: italic;">[Signature]</div>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-tag">
+    Page 2 / 2 &mdash; Lotfi GHEZAL &bull; Visa Application Cover Letter &bull; Austrian Embassy in Algiers
+  </div>
+</div>
+
+</body>
+</html>
